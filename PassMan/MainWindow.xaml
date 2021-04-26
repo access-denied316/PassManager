@@ -48,8 +48,8 @@
         
         <!-- Generate Menu -->
         <StackPanel Grid.Row="2" Grid.Column="1">
-            <CheckBox x:Name="capCB"  Content="Upper case"  IsChecked="True"/>
-            <CheckBox x:Name="lowCB"  Content="Lower case"  IsChecked="True"/>
+            <CheckBox x:Name="capCB"  Content="Uppercase"   IsChecked="True"/>
+            <CheckBox x:Name="lowCB"  Content="Lowercase"   IsChecked="True"/>
             <CheckBox x:Name="numCB"  Content="Numbers"     IsChecked="True"/>
             <CheckBox x:Name="speCB"  Content="Special"     IsChecked="True"/>
             <Separator />
@@ -60,7 +60,15 @@
 
             <Separator />
             <Button Content ="_Generate"   Click="genPass_Click" />
-            <Label x:Name="passPreview">Click generate to get a password</Label>
+            <DockPanel Margin="0,3,0,0">
+                <Button x:Name="passBtn" Click="copyBtn_Click">Copy to Clipboard</Button>
+                <Label BorderThickness="1" x:Name="passPreview">Click generate to get a password</Label>
+            </DockPanel>
+            <DockPanel Margin="0,3,0,0">
+                <Button x:Name="phraseBtn" Click="copyBtn_Click">Copy to Clipboard</Button>
+                <Label BorderThickness="1" x:Name="phrasePreview">Click generate to get a passphrase</Label>
+            </DockPanel>
+            
         </StackPanel>
 
     </Grid>

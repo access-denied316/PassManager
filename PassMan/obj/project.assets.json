@@ -8,24 +8,19 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Owen\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Owen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tools\\GitHub\\PassManager\\PassMan\\PassMan.csproj",
+      "projectUniqueName": "D:\\Tools\\GitHub\\PassManager\\PassMan\\PassMan.csproj",
       "projectName": "PassMan",
-      "projectPath": "C:\\tools\\GitHub\\PassManager\\PassMan\\PassMan.csproj",
+      "projectPath": "D:\\Tools\\GitHub\\PassManager\\PassMan\\PassMan.csproj",
       "packagesPath": "C:\\Users\\Owen\\.nuget\\packages\\",
-      "outputPath": "C:\\tools\\GitHub\\PassManager\\PassMan\\obj\\",
+      "outputPath": "D:\\Tools\\GitHub\\PassManager\\PassMan\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\Owen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

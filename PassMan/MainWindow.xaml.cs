@@ -108,15 +108,18 @@ namespace PassMan
                 available += spe;
             }
 
-            passPreview.Content = available;
+            string password = "";
 
-        }
+            Random random = new System.Random();
 
-        private string getAvailChars(string cap, string low, string num, string spe)
-        {
-            
+            for (int i = 0; i < (int)passLen.Value; i++)
+            {
+                int x = random.Next(0, available.Length);
+                password += available[x];
+            }
 
-            return available;
+            passPreview.Content = password;
+
         }
 
         private void remBtn_Click(object sender, RoutedEventArgs e)
@@ -160,6 +163,11 @@ namespace PassMan
             {
                 MessageBox.Show("There is nothing to remove!");
             }
+        }
+
+        private void copyBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(passPreview.Content.ToString());
         }
     }
 }

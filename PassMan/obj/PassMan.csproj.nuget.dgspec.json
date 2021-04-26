@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Tools\\Github\\PassManager\\PassMan\\PassMan.csproj": {}
+    "D:\\Tools\\GitHub\\PassManager\\PassMan\\PassMan.csproj": {}
   },
   "projects": {
-    "C:\\Tools\\Github\\PassManager\\PassMan\\PassMan.csproj": {
+    "D:\\Tools\\GitHub\\PassManager\\PassMan\\PassMan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Tools\\Github\\PassManager\\PassMan\\PassMan.csproj",
+        "projectUniqueName": "D:\\Tools\\GitHub\\PassManager\\PassMan\\PassMan.csproj",
         "projectName": "PassMan",
-        "projectPath": "C:\\Tools\\Github\\PassManager\\PassMan\\PassMan.csproj",
-        "packagesPath": "C:\\Users\\owen\\.nuget\\packages\\",
-        "outputPath": "C:\\Tools\\Github\\PassManager\\PassMan\\obj\\",
+        "projectPath": "D:\\Tools\\GitHub\\PassManager\\PassMan\\PassMan.csproj",
+        "packagesPath": "C:\\Users\\Owen\\.nuget\\packages\\",
+        "outputPath": "D:\\Tools\\GitHub\\PassManager\\PassMan\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\owen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Owen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
