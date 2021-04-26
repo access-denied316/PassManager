@@ -27,30 +27,40 @@
                     <Separator />
                     <MenuItem Header="_Exit" Click="exitBtn_Click"/>
                 </MenuItem>
-                <MenuItem Header="_Options">
-                    <CheckBox x:Name="cap"  Content="Upper case"  IsChecked="True"/>
-                    <CheckBox x:Name="low"  Content="Lower case"  IsChecked="True"/>
-                    <CheckBox x:Name="num"  Content="Numbers"     IsChecked="True"/>
-                    <CheckBox x:Name="spe"  Content="Special"     IsChecked="True"/>
-                </MenuItem>
+                
                 <MenuItem Header="_New Item"    Click="newPass_Click" />
-                <MenuItem Header ="_Generate"   Click="genPass_Click" />
-                <MenuItem Header="_Remove"      Click="remBtn_Click" />
+                <MenuItem Header="_Remove" Click="remBtn_Click" />
+                <MenuItem Header="_Clear All">
+                    <MenuItem Header="_Clear All" Click="clearAll_Click"/>
+                </MenuItem>
+                
             </Menu>
         </DockPanel>
 
         
+        
         <!-- Password Menu -->
         <StackPanel Grid.Row="2" Grid.Column="0">
-            <Label>Site | Password</Label>
             <ListBox x:Name="passLsBx">
             </ListBox>
         </StackPanel>
         
         
         <!-- Generate Menu -->
-        <StackPanel x:Name="genLsBx" Grid.Row="2" Grid.Column="1">
-            <Label>Haha lol</Label>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <CheckBox x:Name="capCB"  Content="Upper case"  IsChecked="True"/>
+            <CheckBox x:Name="lowCB"  Content="Lower case"  IsChecked="True"/>
+            <CheckBox x:Name="numCB"  Content="Numbers"     IsChecked="True"/>
+            <CheckBox x:Name="speCB"  Content="Special"     IsChecked="True"/>
+            <Separator />
+            <DockPanel VerticalAlignment="Center" Margin="10">
+                <TextBox Text="{Binding ElementName=passLen, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" TextAlignment="Right" Width="40" />
+                <Slider Minimum="8" Maximum="128" MinWidth="100"  TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Name="passLen" />
+            </DockPanel>
+
+            <Separator />
+            <Button Content ="_Generate"   Click="genPass_Click" />
+            <Label x:Name="passPreview">Click generate to get a password</Label>
         </StackPanel>
 
     </Grid>
