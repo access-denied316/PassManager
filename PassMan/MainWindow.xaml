@@ -1,0 +1,57 @@
+﻿<Window x:Class="PassMan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PassMan"
+        mc:Ignorable="d"
+        Title="PassMan" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />     <!--Menu Bar-->
+            <RowDefinition Height="Auto" />     <!--Buttons and such-->
+            <RowDefinition Height="*" />        <!--Password and options-->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <!--Menu Bar-->
+        <DockPanel Grid.Row="0">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Save" Click="saveBtn_Click" />
+                    <MenuItem Header="_Load" Click="loadBtn_Click" />
+                    <Separator />
+                    <MenuItem Header="_Exit" Click="exitBtn_Click"/>
+                </MenuItem>
+                <MenuItem Header="_Options">
+                    <CheckBox x:Name="cap"  Content="Upper case"  IsChecked="True"/>
+                    <CheckBox x:Name="low"  Content="Lower case"  IsChecked="True"/>
+                    <CheckBox x:Name="num"  Content="Numbers"     IsChecked="True"/>
+                    <CheckBox x:Name="spe"  Content="Special"     IsChecked="True"/>
+                </MenuItem>
+                <MenuItem Header="_New Item"    Click="newPass_Click" />
+                <MenuItem Header ="_Generate"   Click="genPass_Click" />
+                <MenuItem Header="_Remove"      Click="remBtn_Click" />
+            </Menu>
+        </DockPanel>
+
+        
+        <!-- Password Menu -->
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label>Site | Password</Label>
+            <ListBox x:Name="passLsBx">
+            </ListBox>
+        </StackPanel>
+        
+        
+        <!-- Generate Menu -->
+        <StackPanel x:Name="genLsBx" Grid.Row="2" Grid.Column="1">
+            <Label>Haha lol</Label>
+        </StackPanel>
+
+    </Grid>
+</Window>
