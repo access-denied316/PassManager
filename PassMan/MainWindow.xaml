@@ -55,20 +55,21 @@
             <Separator />
             <DockPanel VerticalAlignment="Center" Margin="10">
                 <TextBox Text="{Binding ElementName=passLen, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" TextAlignment="Right" Width="40" />
-                <Slider Minimum="8" Maximum="128" MinWidth="100"  TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Name="passLen" />
+                <Slider Value="8" Minimum="1" Maximum="128" MinWidth="100"  TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Name="passLen" />
             </DockPanel>
 
             <Separator />
             <Button Content ="_Generate"   Click="genPass_Click" />
             <DockPanel Margin="0,3,0,0">
-                <Button x:Name="passBtn" Click="copyBtn_Click">Copy to Clipboard</Button>
+                <Button x:Name="passBtn" Click="wordCopyBtn_Click">Copy to Clipboard</Button>
                 <Label BorderThickness="1" x:Name="passPreview">Click generate to get a password</Label>
             </DockPanel>
             <DockPanel Margin="0,3,0,0">
-                <Button x:Name="phraseBtn" Click="copyBtn_Click">Copy to Clipboard</Button>
+                <Button x:Name="phraseBtn" Click="phraseCopyBtn_Click">Copy to Clipboard</Button>
                 <Label BorderThickness="1" x:Name="phrasePreview">Click generate to get a passphrase</Label>
             </DockPanel>
             
+
         </StackPanel>
 
     </Grid>
