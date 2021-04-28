@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 
 
@@ -70,6 +71,47 @@ namespace PassMan
 
         private void genPass_Click(object sender, RoutedEventArgs e)
         {
+            passPreview.Content = password();
+
+            phrasePreview.Content = passphrase();
+
+        }
+
+
+        private double nextDoubleRange(double maxNum, double minNum)
+        {
+            Random random = new System.Random();
+
+            return random.NextDouble() * (maxNum - minNum) + minNum;
+        }
+
+        private string passphrase()
+        {
+            string phrase = "";
+
+            string[] words = File.ReadLines("wordlist.txt").ToArray();
+
+            for (int i = 0; i < 3; i++)
+            {
+                double x = nextDoubleRange(0.0, words.Length);
+                if (!(i == 0))
+                {
+                    phrase += "-";
+                }
+                
+                phrase += words[(int)x];
+            }
+
+            
+
+            return phrase;
+        }
+
+        
+
+        private string password()
+        {
+
             string cap = "";
             for (int i = 'A'; i < 'Z' + 1; i++)
             {
@@ -118,17 +160,14 @@ namespace PassMan
                 password += available[x];
             }
 
-            passPreview.Content = password;
-
+            return password;
         }
 
         private void remBtn_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                passLsBx.Items.RemoveAt
-
-                (passLsBx.Items.IndexOf(passLsBx.SelectedItem));
+                passLsBx.Items.RemoveAt(passLsBx.Items.IndexOf(passLsBx.SelectedItem));
             }
             catch
             {
@@ -165,9 +204,16 @@ namespace PassMan
             }
         }
 
-        private void copyBtn_Click(object sender, RoutedEventArgs e)
+        private void wordCopyBtn_Click(object sender, RoutedEventArgs e)
         {
             Clipboard.SetText(passPreview.Content.ToString());
         }
+
+        private void phraseCopyBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(phrasePreview.Content.ToString());
+        }
+
+        
     }
 }
