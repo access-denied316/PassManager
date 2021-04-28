@@ -1,5 +1,0 @@
-C:\Tools\Github\PassManager\PassMan\obj\Release\net5.0\win-x64\PassMan.csprojAssemblyReference.cache
-C:\Tools\Github\PassManager\PassMan\obj\Release\net5.0\win-x64\PassMan.GeneratedMSBuildEditorConfig.editorconfig
-C:\Tools\Github\PassManager\PassMan\obj\Release\net5.0\win-x64\PassMan.AssemblyInfoInputs.cache
-C:\Tools\Github\PassManager\PassMan\obj\Release\net5.0\win-x64\PassMan.AssemblyInfo.cs
-C:\Tools\Github\PassManager\PassMan\obj\Release\net5.0\win-x64\PassMan.csproj.CoreCompileInputs.cache
